@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "7dcf7d8d-281d-4b88-82f1-944afd1cedba",
+		"name": "auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mohammad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/getToken",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"getToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mohammad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/getToken",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"getToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mohammad@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "234567",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/token/refresh",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"token",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "$2y$10$C/stgEPcCODchVH8fsNc/e8rxGpl79UibpkZkX/blkWGtCdZRbAtK",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "permission",
+							"value": "show_product",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "234567",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ebb7ba32-1ef4-4474-bd4b-354b747a041c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "acae3fc8-441e-47e9-b6e6-483650d26a32",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "db7bfa8c-6fec-4f98-b64f-422388f20b80",
+			"key": "url",
+			"value": "localhost:8000/api",
+			"type": "string"
+		},
+		{
+			"id": "4b9f338e-8f9d-46a3-aded-58224618679f",
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
